@@ -4,7 +4,6 @@
 	<div class="tabbable hero-unit"> <!-- Only required for left/right tabs -->
 	  <ul class="nav nav-tabs">
 	    <li class="active"><a href="#tab1" data-toggle="tab">Details</a></li>
-	    <li><a href="#tab2" data-toggle="tab">Descriptions </a></li>
 		<li><a href="#tab3" data-toggle="tab">Factandfigures </a></li>
 		<li><a href="#tab4" data-toggle="tab">Destination </a></li>
 		<li><a href="#tab5" data-toggle="tab">Parking </a></li>
@@ -39,10 +38,6 @@
 			  <p>
 			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 			  </p>
-		  </p>
-	    </div>
-	    <div class="tab-pane" id="tab2">
-	      <p><!--I'm in Section 2-->
 			  <p>
 			    <strong>  Descriptions:</strong>
 			    <%= @location.air_descriptions %>
@@ -50,7 +45,7 @@
 		  </p>
 	    </div>
 	    <div class="tab-pane" id="tab3">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 3-->
 			  <p>
 				  <p>
 				    <strong>  Factandfigures:</strong>
@@ -60,7 +55,7 @@
 		  </p>
 	    </div>
 	    <div class="tab-pane" id="tab4">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 4-->
 			  <p>
 				  <p>
 				    <strong>  Destination:</strong>
@@ -70,7 +65,7 @@
 		  </p>
 	    </div> 
 	    <div class="tab-pane" id="tab5">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 5-->
 			  <p>
 				  <p>
 				    <strong>  Parking:</strong>
@@ -80,7 +75,7 @@
 		  </p>
 	    </div>
 	    <div class="tab-pane" id="tab6">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 6-->
 			  <p>
 			    <strong>  History:</strong>
 			    <%= @location.air_history %>
@@ -88,7 +83,7 @@
 		  </p>
 	    </div> 
 	    <div class="tab-pane" id="tab7">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 7-->
 			  <p>
 			    <strong>  Hotels:</strong>
 			    <%= @location.air_hotels %>
@@ -96,7 +91,7 @@
 		  </p>
 	    </div> 
 	    <div class="tab-pane" id="tab8">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 8-->
 			  <p>
 			    <strong>  Directions:</strong>
 			    <%= @location.air_directions %>
@@ -104,7 +99,7 @@
 		  </p>
 	    </div>
 	    <div class="tab-pane" id="tab9">
-	      <p><!--I'm in Section 2-->
+	      <p><!--I'm in Section 9-->
 			  <ul>
 			  <% for location in @location.nearbys(10) %>
 			    <li><%= link_to location.air_postcode, location %> (<%= location.distance.round(2) %> miles)</li>
