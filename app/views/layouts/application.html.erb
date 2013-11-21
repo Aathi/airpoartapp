@@ -24,14 +24,15 @@
 			      <ul class="nav">
 			        <!--<li class="active"><a href="#">Home</a></li>-->
 				  <ul class="nav pull-left">
-					  <% if user_signed_in? %>
-				  	 <li class="nav pull-right"> 
-						 <%= link_to 'Edit profile', 								 edit_user_registration_path %></li>
+				  	<% if user_signed_in? %>
+				  	
+				  	 <li class="nav pull-right"> <%= link_to 'Edit profile', 								 edit_user_registration_path %></li>
 				  	 <li> <%= link_to "Logout", destroy_user_session_path, method: 							  :delete %></li>
 				  	<% else %>
 				  	 <li> <%= link_to "Sign up", new_user_registration_path %> </li>
 				  	 <li> <%= link_to "Login", new_user_session_path %></li>
-				  	<% end %>			        				    		        				</ul>
+				  	<% end %>
+								        				    		        					 </ul>
 			      </ul>
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
@@ -41,7 +42,10 @@
 		    </div>
 		  </div>
 		</div>
-		Current User:<li class="label label-success"> <%= 								current_user.email %></li>
+		<% if user_signed_in? %>
+		<li class="label"> Current User:</li>
+		<li class="label label-success">
+			<%= current_user.email %></li><% end %>
 	</div>
 	
 	

@@ -40,6 +40,7 @@ gem 'twitter-bootstrap-rails', '2.2.8'
 gem "therubyracer"
 gem "less-rails"
 gem 'devise'
+gem 'friendly_id'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

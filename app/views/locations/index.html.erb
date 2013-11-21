@@ -3,7 +3,9 @@
 <table class="table table-condensed">
   <tr>
     <th> Airpoart Name</th>
+    <% if user_signed_in? %>
     <th> Actions </th>
+    <%end%>
     <th>  </th>    
   </tr>
   <% for location in @locations %>
