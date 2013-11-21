@@ -22,7 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
+http://getbootstrap.com/2.3.2/components.html
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

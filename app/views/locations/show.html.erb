@@ -1,7 +1,7 @@
 <% title "Location" %>
 <div class="container">
 
-	<div class="tabbable"> <!-- Only required for left/right tabs -->
+	<div class="tabbable hero-unit"> <!-- Only required for left/right tabs -->
 	  <ul class="nav nav-tabs">
 	    <li class="active"><a href="#tab1" data-toggle="tab">Details</a></li>
 	    <li><a href="#tab2" data-toggle="tab">Descriptions </a></li>
@@ -17,8 +17,8 @@
 	    <div class="tab-pane active" id="tab1">
 	      <p><!--I'm in Section 1-->
 			  <p>
-			    <strong>  Name:</strong>
-			    <%= @location.air_name %>
+			    <strong>  Name:</strong><span class="badge badge-success">
+			    <%= @location.air_name %></span>
 			  </p>
 			  <p>
 			    <strong>  Code:</strong>

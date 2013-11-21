@@ -14,8 +14,6 @@
     <th>  History</th>
     <th>  Hotels</th>
     <th>  Directions</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
   </tr>
   <% for location in @locations %>
     <tr>
@@ -31,8 +29,6 @@
       <td><%= location.air_history %></td>
       <td><%= location.air_hotels %></td>
       <td><%= location.air_directions %></td>
-      <td><%= location.latitude %></td>
-      <td><%= location.longitude %></td>
       <td><%= link_to "Show", location %></td>
       <td><%= link_to "Edit", edit_location_path(location) %></td>
       <td><%= link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
