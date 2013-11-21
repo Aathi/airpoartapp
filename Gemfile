@@ -39,6 +39,7 @@ gem 'protected_attributes'
 gem 'twitter-bootstrap-rails', '2.2.8'
 gem "therubyracer"
 gem "less-rails"
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -20,24 +20,32 @@
 		      </a>
  
 		      <!-- Be sure to leave the brand out there if you want it shown -->
-			      <a class="brand" href="#">Airpoart Informations</a>
+			 <a class="brand" href="/locations">Airpoart Informations</a>
 			      <ul class="nav">
-			        <li class="active"><a href="#">Home</a></li>
-			        <li><a href="#">Link</a></li>
-			        <li><a href="#">Link</a></li>
+			        <!--<li class="active"><a href="#">Home</a></li>-->
+				  <ul class="nav pull-left">
+					  <% if user_signed_in? %>
+				  	 <li class="nav pull-right"> 
+						 <%= link_to 'Edit profile', 								 edit_user_registration_path %></li>
+				  	 <li> <%= link_to "Logout", destroy_user_session_path, method: 							  :delete %></li>
+				  	<% else %>
+				  	 <li> <%= link_to "Sign up", new_user_registration_path %> </li>
+				  	 <li> <%= link_to "Login", new_user_session_path %></li>
+				  	<% end %>			        				    		        				</ul>
 			      </ul>
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
 		        <!-- .nav, .navbar-search, .navbar-form, etc -->
-				<form class="navbar-search pull-left">
-				  <input type="text" class="search-query" placeholder="Search">
-				</form>
 		      </div>
  
 		    </div>
 		  </div>
 		</div>
+		Current User:<li class="label label-success"> <%= 								current_user.email %></li>
 	</div>
+	
+	
+	
 	<div class="">
 	<%= yield %>
 	</div>

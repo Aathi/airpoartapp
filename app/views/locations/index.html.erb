@@ -2,38 +2,21 @@
 <div class="container">
 <table class="table table-condensed">
   <tr>
-    <th>  Name</th>
-    <th>  Code</th>
-    <th>  Contactnumber</th>
-    <th>  Address</th>
-    <th>  Postcode</th>
-    <th>  Descriptions</th>
-    <th>  Factandfigures</th>
-    <th>  Destination</th>
-    <th>  Parking</th>
-    <th>  History</th>
-    <th>  Hotels</th>
-    <th>  Directions</th>
+    <th> Airpoart Name</th>
+    <th> Actions </th>
+    <th>  </th>    
   </tr>
   <% for location in @locations %>
     <tr>
-      <td><%= location.air_name %></td>
-      <td><%= location.air_code %></td>
-      <td><%= location.air_contactnumber %></td>
-      <td><%= location.air_address %></td>
-      <td><%= location.air_postcode %></td>
-      <td><%= location.air_descriptions %></td>
-      <td><%= location.air_factandfigures %></td>
-      <td><%= location.air_destination %></td>
-      <td><%= location.air_parking %></td>
-      <td><%= location.air_history %></td>
-      <td><%= location.air_hotels %></td>
-      <td><%= location.air_directions %></td>
-      <td><%= link_to "Show", location %></td>
+      <td><%= link_to location.air_name,location %></td>
+     
+      
+	<% if user_signed_in? %>
       <td><%= link_to "Edit", edit_location_path(location) %></td>
       <td><%= link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
+	<%end%>
     </tr>
   <% end %>
 </table>
-<p><%= link_to "New Location", new_location_path %></p>
+<p><%= link_to "Create New", new_location_path, :class => "btn btn-info" %></p>
 </div>
