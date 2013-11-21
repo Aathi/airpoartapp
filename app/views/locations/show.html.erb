@@ -1,0 +1,126 @@
+<% title "Location" %>
+<div class="container">
+
+	<div class="tabbable"> <!-- Only required for left/right tabs -->
+	  <ul class="nav nav-tabs">
+	    <li class="active"><a href="#tab1" data-toggle="tab">Details</a></li>
+	    <li><a href="#tab2" data-toggle="tab">Descriptions </a></li>
+		<li><a href="#tab3" data-toggle="tab">Factandfigures </a></li>
+		<li><a href="#tab4" data-toggle="tab">Destination </a></li>
+		<li><a href="#tab5" data-toggle="tab">Parking </a></li>
+		<li><a href="#tab6" data-toggle="tab">History </a></li>
+		<li><a href="#tab7" data-toggle="tab">Hotels </a></li>
+		<li><a href="#tab8" data-toggle="tab">Directions </a></li>
+		<li><a href="#tab9" data-toggle="tab">Near By </a></li>
+	  </ul>
+	  <div class="tab-content">
+	    <div class="tab-pane active" id="tab1">
+	      <p><!--I'm in Section 1-->
+			  <p>
+			    <strong>  Name:</strong>
+			    <%= @location.air_name %>
+			  </p>
+			  <p>
+			    <strong>  Code:</strong>
+			    <%= @location.air_code %>
+			  </p>
+			  <p>
+			    <strong>  Contactnumber:</strong>
+			    <%= @location.air_contactnumber %>
+			  </p>
+			  <p>
+			    <strong>  Address:</strong>
+			    <%= @location.air_address %>
+			  </p>
+			  <p>
+			    <strong>  Postcode:</strong>
+			    <%= @location.air_postcode %>
+			  </p>
+			  <p>
+			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+			  </p>
+		  </p>
+	    </div>
+	    <div class="tab-pane" id="tab2">
+	      <p><!--I'm in Section 2-->
+			  <p>
+			    <strong>  Descriptions:</strong>
+			    <%= @location.air_descriptions %>
+			  </p>
+		  </p>
+	    </div>
+	    <div class="tab-pane" id="tab3">
+	      <p><!--I'm in Section 2-->
+			  <p>
+				  <p>
+				    <strong>  Factandfigures:</strong>
+				    <%= @location.air_factandfigures %>
+				  </p>
+			  </p>
+		  </p>
+	    </div>
+	    <div class="tab-pane" id="tab4">
+	      <p><!--I'm in Section 2-->
+			  <p>
+				  <p>
+				    <strong>  Destination:</strong>
+				    <%= @location.air_destination %>
+				  </p>
+			  </p>
+		  </p>
+	    </div> 
+	    <div class="tab-pane" id="tab5">
+	      <p><!--I'm in Section 2-->
+			  <p>
+				  <p>
+				    <strong>  Parking:</strong>
+				    <%= @location.air_parking %>
+				  </p>
+			  </p>
+		  </p>
+	    </div>
+	    <div class="tab-pane" id="tab6">
+	      <p><!--I'm in Section 2-->
+			  <p>
+			    <strong>  History:</strong>
+			    <%= @location.air_history %>
+			  </p>
+		  </p>
+	    </div> 
+	    <div class="tab-pane" id="tab7">
+	      <p><!--I'm in Section 2-->
+			  <p>
+			    <strong>  Hotels:</strong>
+			    <%= @location.air_hotels %>
+			  </p>
+		  </p>
+	    </div> 
+	    <div class="tab-pane" id="tab8">
+	      <p><!--I'm in Section 2-->
+			  <p>
+			    <strong>  Directions:</strong>
+			    <%= @location.air_directions %>
+			  </p>
+		  </p>
+	    </div>
+	    <div class="tab-pane" id="tab9">
+	      <p><!--I'm in Section 2-->
+			  <ul>
+			  <% for location in @location.nearbys(10) %>
+			    <li><%= link_to location.air_postcode, location %> (<%= location.distance.round(2) %> miles)</li>
+			  <% end %>
+			  </ul>
+		  </p>
+	    </div>  
+	  </div>
+	</div>
+		
+
+<p>
+  <%= link_to "Edit", edit_location_path(@location) %> |
+  <%= link_to "Destroy", @location, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", locations_path %>
+</p>
+</div>
+
+
