@@ -37,6 +37,8 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.7)
+    contact_us (0.5.1)
+      rails (>= 4.0.0)
     devise (3.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -147,6 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  contact_us
   devise
   friendly_id
   geocoder
