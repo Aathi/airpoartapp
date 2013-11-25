@@ -1,0 +1,18 @@
+<div class="container">
+<%= form_for @faq do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :topic %>
+    <%= f.text_field :topic, class: "span5" %>
+  </p>
+  <p>
+    <%= f.label :question %>
+    <%= f.text_area :question, class: "span5" %>
+  </p>
+  <p>
+    <%= f.label :answer %>
+    <%= f.text_area :answer, class: "span7" %>
+  </p>
+  <p><%= f.submit "Submit", :class => "btn btn-primary" %></p>
+<% end %>
+</div>

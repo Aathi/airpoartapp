@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131121112146) do
+ActiveRecord::Schema.define(version: 20131125101804) do
+
+  create_table "faqs", force: true do |t|
+    t.string   "topic"
+    t.text     "question"
+    t.text     "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", force: true do |t|
     t.string   "air_name"

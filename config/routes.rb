@@ -1,4 +1,5 @@
 Airpoartapp::Application.routes.draw do
+  resources :faqs
   devise_for  :users, path_names: { sign_in: "login", sign_out: "logout"}
   resources :locations, path_names: { show: "All-Airpoarts"}
   # The priority is based upon order of creation: first created -> highest priority.
