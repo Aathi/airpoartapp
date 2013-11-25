@@ -1,5 +1,5 @@
 <% title "Locations" %>
-<div class="container">
+
 <table class="table table-condensed">
   <tr>
     <th> Airpoart Name</th>
@@ -20,5 +20,7 @@
     </tr>
   <% end %>
 </table>
+<% if user_signed_in? %>
 <p><%= link_to "Create New", new_location_path, :class => "btn btn-info" %></p>
-</div>
+<% end %>
+
