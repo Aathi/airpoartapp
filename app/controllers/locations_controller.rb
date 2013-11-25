@@ -1,6 +1,4 @@
-class LocationsController < ApplicationController
-        
-        
+class LocationsController < ApplicationController               
   def index
     if params[:search].present?
        @locations = Location.near(params[:search], 50, :order => :distance)
@@ -11,8 +9,14 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    
+    #Rails: rendering XML adds: Site Map:XML
+    respond_to do |format|
+        format.xml  {render :xml => @location.to_xml(:root => 'location')}
+    end
+    
   end
-
+  
   def new
     @location = Location.new
   end

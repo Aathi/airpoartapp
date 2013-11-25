@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= metamagic :title => "airpoart cab service", :description => "airpoart cab service.", 			 :keywords => %w(cab,minicab,airpoard,cheape,) %>
 </head>
 <body>
 	<div class="container">
@@ -47,7 +48,7 @@
 		<% if user_signed_in? %>
 		<li class="label"> Current User:</li>
 		<li class="label label-success">
-			<%= current_user.email %></li><% end %>
+			<%= current_user.email  %></li><br /><br /><% end %>
 	</div>
 	
 	

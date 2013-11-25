@@ -42,6 +42,7 @@ gem "less-rails"
 gem 'devise'
 gem 'friendly_id'
 gem 'contact_us'
+gem 'metamagic'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

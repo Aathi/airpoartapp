@@ -69,6 +69,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     metaclass (0.0.1)
+    metamagic (2.0.6)
+      rails (>= 3.0.0)
     mime-types (1.25)
     minitest (4.7.5)
     mocha (0.14.0)
@@ -156,6 +158,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  metamagic
   mocha
   nifty-generators
   protected_attributes
