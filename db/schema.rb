@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125101804) do
+ActiveRecord::Schema.define(version: 20131125122227) do
 
   create_table "faqs", force: true do |t|
     t.string   "topic"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20131125101804) do
     t.text     "air_directions"
     t.float    "latitude"
     t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", force: true do |t|
+    t.string   "name"
+    t.string   "emailid"
+    t.string   "encrypted_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

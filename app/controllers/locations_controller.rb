@@ -10,11 +10,11 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     
-    #Rails: rendering XML adds: Site Map:XML
+    # rendering XML adds: Site Map:XML
     respond_to do |format|
-        format.xml  {render :xml => @location.to_xml(:root => 'location')}
-    end
-    
+        format.html    
+        format.xml  {render :xml => @location.to_xml(:root => 'locations')}
+    end   
   end
   
   def new

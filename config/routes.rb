@@ -1,4 +1,6 @@
 Airpoartapp::Application.routes.draw do
+  resources :tests
+
   resources :faqs
   devise_for  :users, path_names: { sign_in: "login", sign_out: "logout"}
   resources :locations, path_names: { show: "All-Airpoarts"}
