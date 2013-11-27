@@ -6,8 +6,12 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= metamagic :title => "airpoart cab service", :description => "airpoart cab service.", 			 :keywords => %w(cab,minicab,airpoard,cheape,) %>
+	 
+   </script>
+	 
 </head>
 <body>
+	
 	<div class="container">
 		<div class="navbar">
 		  <div class="navbar-inner">
@@ -35,7 +39,8 @@
 				  	<% end %>	
 					<li><%= link_to "Contact Us", new_contact_path %> </li>
 					<li><%= link_to "FAQs", faqs_path %> </li>
-							       				    		        					 </ul>
+					<li><%= link_to "T & C", terms_con_terms_con_path %> </li>
+	       		 </ul>
 					
 			      </ul>
 		      <!-- Everything you want hidden at 940px or less, place within here -->
@@ -54,11 +59,13 @@
 	
 	
 	
-	<div class="container">
-		
+	<div class="container">	
 	<%= yield %>
-
 	</div>
-
+	
+	<div class="container form-actions">
+	<%= social_share_button_tag %>	
+	</div>
+		
 </body>
 </html>

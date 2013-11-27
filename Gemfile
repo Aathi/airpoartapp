@@ -43,6 +43,10 @@ gem 'devise'
 gem 'friendly_id'
 gem 'contact_us'
 gem 'metamagic'
+gem 'yahoo_weather'
+gem 'yahoo_weatherman'
+gem 'nokogiri'
+gem 'social-share-button'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

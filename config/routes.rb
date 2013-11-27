@@ -1,8 +1,10 @@
 Airpoartapp::Application.routes.draw do
+  get "terms_con/terms_con"
+  get "tearms_conditions/terms"
   resources :tests
 
   resources :faqs
-  devise_for  :users, path_names: { sign_in: "login", sign_out: "logout"}
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
   resources :locations, path_names: { show: "All-Airpoarts"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

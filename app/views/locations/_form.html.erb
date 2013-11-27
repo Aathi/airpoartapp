@@ -2,51 +2,51 @@
   <%= f.error_messages %>
   <p>
     <%= f.label :name %>  
-    <%= f.text_field :air_name %>
+    <%= f.text_field :air_name, :required => true %>
   </p>
   <p>
     <%= f.label :code %>  
-    <%= f.text_field :air_code %>
+    <%= f.text_field :air_code, :required => true %>
   </p>
   <p>
     <%= f.label :contactnumber %>  
-    <%= f.text_field :air_contactnumber %>
+    <%= f.text_field :air_contactnumber, :required => true %>
   </p>
   <p>
     <%= f.label :address %>  
-    <%= f.text_area :air_address, class: "span6" %>
+    <%= f.text_area :air_address, class: "span6", :required => true %> 
   </p>
   <p>
     <%= f.label :postcode %>  
-    <%= f.text_field :air_postcode %>
+    <%= f.text_field :air_postcode, :required => true %>
   </p>
   <p>
     <%= f.label :descriptions %>  
-    <%= f.text_area :air_descriptions, class: "span9" %>
+    <%= f.text_area :air_descriptions, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :factandfigures %>  
-    <%= f.text_area :air_factandfigures, class: "span9" %>
+    <%= f.text_area :air_factandfigures, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :destination %>  
-    <%= f.text_area :air_destination, class: "span9" %>
+    <%= f.text_area :air_destination, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :parking %>  
-    <%= f.text_area :air_parking, class: "span9" %>
+    <%= f.text_area :air_parking, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :history %>  
-    <%= f.text_area :air_history, class: "span9" %>
+    <%= f.text_area :air_history, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :hotels %>  
-    <%= f.text_area :air_hotels, class: "span9" %>
+    <%= f.text_area :air_hotels, class: "span9", :required => true %>
   </p>
   <p>
     <%= f.label :directions %>  
-    <%= f.text_area :air_directions, class: "span9" %>
+    <%= f.text_area :air_directions, class: "span9", :required => true %>
   </p>
   <p><%= f.submit :class => 'btn btn-primary'  %></p>
 

@@ -1,4 +1,11 @@
-class LocationsController < ApplicationController               
+class LocationsController < ApplicationController  
+
+        require  'yahoo_weatherman'
+ 
+        client = YahooWeather::Client.new
+        @response = client.fetch(12797168)
+
+                          
   def index
     if params[:search].present?
        @locations = Location.near(params[:search], 50, :order => :distance)
