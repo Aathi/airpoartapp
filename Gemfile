@@ -47,6 +47,7 @@ gem 'yahoo_weather'
 gem 'yahoo_weatherman'
 gem 'nokogiri'
 gem 'social-share-button'
+gem 'rails_admin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
