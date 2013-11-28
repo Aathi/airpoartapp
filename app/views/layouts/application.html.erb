@@ -58,14 +58,31 @@
 	</div>
 	
 	
-	
 	<div class="container">	
-	<%= yield %>
+		<div class="">
+			<%= yield %>
+		</div>
 	</div>
 	
 	<div class="container form-actions">
-	<%= social_share_button_tag %>	
-	</div>
+	<%= social_share_button_tag %>
+	
 		
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('#test').weatherfeed(['UKXX0085']);
+		});
+		</script>
+		<style>
+		.day { background-color: #b0b0f0; color: black;  }
+		.day a { color: #555; }
+
+		.night { background-color: #2a2a33; color: white; }
+		.night a:hover { color: #fff; }
+		</style>
+		
+		<div id="test"></div>
+		
+	</div>
 </body>
 </html>
