@@ -4,7 +4,7 @@
   <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
   <%= f.input :email, :label => t('.email') %>
   <%= f.input :subject, :label => t('.subject') if ContactUs.require_subject %>
-  <%= f.input  :message, :as => :text, :label => t('.message'),:class =>"span7" %>
+  <%= f.input  :message, :as => :text, :label => t('.message'),class: "span7" %>
   <p><%= f.submit "Submit",:class => 'btn ' %></p>
 <% end %>
 
