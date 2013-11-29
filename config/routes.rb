@@ -1,4 +1,5 @@
 Airpoartapp::Application.routes.draw do
+  get "about_us/index"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get "terms_con/terms_con"
   get "tearms_conditions/terms"
